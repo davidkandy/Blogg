@@ -1,0 +1,8 @@
+C:\Users\david\source\repos\Blogg\obj\Debug\netcoreapp3.1\Blogg.csproj.AssemblyReference.cache
+C:\Users\david\source\repos\Blogg\obj\Debug\netcoreapp3.1\Blogg.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\david\source\repos\Blogg\obj\Debug\netcoreapp3.1\Blogg.AssemblyInfoInputs.cache
+C:\Users\david\source\repos\Blogg\obj\Debug\netcoreapp3.1\Blogg.AssemblyInfo.cs
+C:\Users\david\source\repos\Blogg\obj\Debug\netcoreapp3.1\Blogg.csproj.CoreCompileInputs.cache
+C:\Users\david\source\repos\Blogg\obj\Debug\netcoreapp3.1\Blogg.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\david\source\repos\Blogg\obj\Debug\netcoreapp3.1\Blogg.RazorAssemblyInfo.cache
+C:\Users\david\source\repos\Blogg\obj\Debug\netcoreapp3.1\Blogg.RazorAssemblyInfo.cs
