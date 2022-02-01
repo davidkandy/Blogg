@@ -12,13 +12,13 @@ namespace Blogg
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private DbSet<T> table = null
-            ;
+        private DbSet<T> table = null;
         private AppDbContext _context = null;
 
         public Repository(AppDbContext context)
         {
             _context = context;
+            table = _context.Set<T>();
         }
         public void AddPost(Post post)
         {
@@ -32,7 +32,7 @@ namespace Blogg
         public IEnumerable<T> GetAll(GeneralResourceParameters resourceParameters)
         {
             var collection = table.AsQueryable();
-            return IndexViewModel<T>.Create(collection, resourceParameters.PageNumber, resourceParameters.PageSize);
+            return PaginatedList<T>.Create(collection, resourceParameters.PageNumber, resourceParameters.PageSize);
         }
 
         //OBSOLETE
@@ -89,7 +89,7 @@ namespace Blogg
         }
 
 
-        IndexViewModel<T> IRepository<T>.GetAllPosts(int pageNumber, string category)
+        PaginatedList<T> IRepository<T>.GetAllPosts(int pageNumber, string category)
         {
             throw new NotImplementedException();
         }

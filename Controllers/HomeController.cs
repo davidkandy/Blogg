@@ -14,13 +14,16 @@ namespace Blogg.Controllers
 {
     public class HomeController : Controller
     {
-        private IRepository<Post> _repo = null;
+        private IRepository<Post> _repo;
         private IFileManager _fileManager;
         private AppDbContext _context;
 
         public HomeController(IRepository<Post> repo, IFileManager fileManager, AppDbContext context)
         {
-            _repo = repo ?? throw new NullReferenceException(nameof(repo));
+            if (repo != null)
+                _repo = repo;
+            else
+                throw new ArgumentNullException(nameof(repo));
             _fileManager = fileManager;
             _context = context;
         }
@@ -41,8 +44,11 @@ namespace Blogg.Controllers
                 posts = _repo.GetAll(resourceParameters);
             else
                 posts = _context.Posts.ToList();
+            var indexViewmodel = new IndexViewModel();
+            indexViewmodel.Posts = posts;
 
-            return Ok(posts);
+            return View(indexViewmodel);
+
             //int excludeRecords = pageSize * (pageNumber - 1);
             //var records = _context.Posts.Include(m => m.Title).Include(c => c.Category).Include(b => b.Body)
             //    .Skip(excludeRecords)

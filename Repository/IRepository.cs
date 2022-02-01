@@ -12,7 +12,7 @@ namespace Blogg
         Post GetPost(int id);
         IEnumerable<T> GetAll(GeneralResourceParameters resourceParameters);
         List<Post> GetAllPosts();
-        IndexViewModel<T> GetAllPosts(int pageNumber, string category);
+        PaginatedList<T> GetAllPosts(int pageNumber, string category);
         void AddPost(Post post);
         void UpdatePost(Post post);
         void RemovePost(int id);
