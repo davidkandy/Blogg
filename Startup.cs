@@ -56,6 +56,7 @@ namespace Blogg
         {
             if (env.IsDevelopment())
             {
+                app.UseDeveloperExceptionPage();
             }
 
             app.UseDeveloperExceptionPage();

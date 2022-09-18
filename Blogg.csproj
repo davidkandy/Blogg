@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>.net5.0</TargetFramework>
+    <TargetFramework>.net6</TargetFramework>
 	<LangVersion>preview</LangVersion>
 	<EnablePreviewFeatures>true</EnablePreviewFeatures>
 
@@ -25,8 +25,6 @@
   <ItemGroup>
     <None Include="wwwroot\lib\Trumbowyg-main\.github\FUNDING.yml" />
     <None Include="wwwroot\lib\Trumbowyg-main\.github\ISSUE_TEMPLATE.md" />
-    <None Include="wwwroot\lib\Trumbowyg-main\Trumbowyg-main\.github\FUNDING.yml" />
-    <None Include="wwwroot\lib\Trumbowyg-main\Trumbowyg-main\.github\ISSUE_TEMPLATE.md" />
   </ItemGroup>
 		
   <!--<ItemGroup>-->
